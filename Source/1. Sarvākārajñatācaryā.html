@@ -1,0 +1,535 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Bibliotheca Polyglotta</title>
+<link rel='stylesheet' type='text/css' href='css/bp.css'>
+<link rel='stylesheet' type='text/css' href='css/diac_doc.css'>
+
+<link rel='stylesheet' type='text/css' href='css/imageGallery.css'>
+<link rel='stylesheet' type='text/css' href='css/ss.css'>
+	      <link rel='stylesheet' type='text/css' href='css/tree_menu.css'>
+<script type="text/javascript" src="js/jquery-1.3.2.js"></script>
+<!--  <script type="text/javascript" src="js/jqModal.js"></script>-->
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/tree_menu.js"></script>
+<!-- <script src="js/analytics_tracking.js" type="text/javascript"></script> -->
+
+
+<!-- <script type="text/javascript" src="js/popupDivhandling.js"></script> -->
+<!--  <script type="text/javascript" src="jquery-latest.js"></script>
+<script type="text/javascript" src="js/jquery-imagegallery.js"></script>-->
+</head>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//vrtx.uio.no/js/analytics/v2/analytics.js','ga');
+
+ga('create', 'UA-86407471-1', 'auto');
+ga(function(tracker) {
+
+	// Modifies sendHitTask to hit ipproxy instead of http://www.google-analytics.com directly
+	tracker.set('sendHitTask', function(model) {
+		payload = model.get('hitPayload');
+		var xhr = new XMLHttpRequest();
+		xhr.open('GET', '//w3prod-ipproxy.uio.no/collect' +'?' + payload, true);
+		xhr.send();
+	});
+		ga('send', 'pageview');
+});
+</script>
+<body><div class='banner'></div><!-- banner --><div class='uiologo'>
+<a href='http://www.hf.uio.no/'><img src='https://www2.hf.uio.no/polyglotta/hfe.png' border='0'></a></div><!-- uiologo --><div class='clear'></div>
+<div class='smule_tittel'>
+<div class='brodsmuleboks'>You are here: <a href='/polyglotta/index.php' accesskey='1'> BP HOME</a> >  <a href='/polyglotta/index.php?page=library&amp;bid=2' accesskey='1'>TLB</a> > <a href='/polyglotta/index.php
+	?page=volume&amp;vid=1173' accesskey='1'>PP: Ratnaguṇasaṃcayagāthā</a> > fulltext</div><div class='clear'></div>
+<div class='headline'>PP: Ratnaguṇasaṃcayagāthā<div class='clear'></div></div><!-- headline -->
+</div><!-- smule_tittel -->
+<!--<div>-->
+
+<h2 class="trigger" id="tr_lang"><a  href="#">Choose languages</a></h2>
+<h2 class="trigger" id="tr_img"><a  href="#">Choose images, etc.</a></h2>
+
+
+<div id="toggle_container_lan">
+
+<form  id="tr"  name="Sprakvalg2" action="inc/set_cookie_lan.php" method="POST">
+
+<div style="float:left; width:auto; text-align:left; margin-left:20px;">
+<h5>Choose languages</h5>
+<ul>
+<input value="Choose all" type="button" onClick="markAll('tr')"><input value="Uncheck all" type="button" onClick="markNone('tr')">
+
+	<li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1173[6266]" value="6266" id="lancheckbox" checked >Sanskrit: Rgs verse</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1173[6267]" value="6267" id="lancheckbox" checked >Chinese: T.229, Fa-xian (法賢法師), A.D. 991</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1173[6268]" value="6268" id="lancheckbox" checked >Tibetan: Kj, sher rab sna tshogs, ka</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1173[6269]" value="6269" id="lancheckbox" checked >English: Conze (1973)</label></li><div style="clear:both"></div>
+<input type='submit' name='set_cookie' value='Save view'>
+<div style="clear:both"></div>
+
+</ul>
+<input type="hidden" name="vid" value="1173">
+<input type="hidden" name="page" value="fulltext">
+</form>
+</div>
+</div>
+
+<div id="toggle_container_img">
+<form  id="tr"  name="Sprakvalg2" action="inc/set_cookie_img.php" method="POST">
+
+<div style="float:left; width:auto; text-align: left;">
+<h5>Choose display</h5>
+<ul>
+		
+	<li> 
+		<input type='checkbox' name='bilder' checked="checked" > Enable images
+	</li>
+	<li> 
+	<input type='checkbox' onclick="onOffCheckbox();" name='fotnoter' checked="checked"> Enable footnotes
+	<div id="pff" style="display:block" >
+	<ul>
+	<li><input type='radio' name='fotnote_valg'  value='show_a' checked> Show all footnotes</li>
+	<li><input type='radio' name='fotnote_valg'  value='show_h'  > Minimize footnotes</li>
+	</ul>
+	</li>
+	
+	</div>
+	<div style="float:left; width:20em; text-align: left; margin-left:120px ">
+	<div style="clear:both"></div>
+	<input type='submit' name='set_cookie' value='Save view'>
+	<div style="clear:both"></div>
+	</div>
+	
+</ul>
+<input type="hidden" name="vid" value="1173">
+<input type="hidden" name="page" value="fulltext">
+</form>
+</div>
+	
+
+
+
+</div>
+</div>
+
+<div class='sok'><form name='Sok' id='FormBlock' action='/polyglotta/index.php' method='get'>
+<input type='hidden' name='page' value='search'>
+<input type='hidden' name='bid' value='2'>
+<input type='hidden' name='vid' value='1173'>
+<div class='sokeboks'>
+<input name='sokefelt' id='sokeboks' type='text' size='30' value=''>
+<input type='submit' name='Sok' value='Search' id='nsubmit'>
+<div class='clear'></div><a class="diacbutton" id="diacbutton" href="#">Diacritica</a><a id="diac2button" class="diac2button"  href="#">Diacritica-help</a><a class="s2button" href="https://wiki.uio.no/hf/dmlf/index.php/Kategori:Polyglotta:Documentation:SearchHelp">Search-help</a><div class='diacritical' id='diacritical_sign'><div style="text-align: left; ">
+<table class = 'diacritica' width="200" border="1" cellpadding="1" cellspacing="1" id="diacritical">
+    <tbody>
+        <tr>
+            <td style="text-align: center; ">ā</td>
+            <td style="text-align: center; ">ī</td>
+            <td style="text-align: center; ">ū</td>
+            <td style="text-align: center; ">ṛ</td>
+            <td style="text-align: center; ">ṝ</td>
+            <td style="text-align: center; ">ḷ</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">ḹ</td>
+            <td style="text-align: center; ">&rsquo;</td>
+            <td style="text-align: center; ">ṃ</td>
+            <td style="text-align: center; ">ḥ</td>
+            <td style="text-align: center; ">ṅ</td>
+            <td style="text-align: center; ">&ntilde;</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">ṭ</td>
+            <td style="text-align: center; ">ḍ</td>
+            <td style="text-align: center; ">ṇ</td>
+            <td style="text-align: center; ">ṣ</td>
+            <td style="text-align: center; ">ś</td>
+            <td style="text-align: center; ">ź</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">&scaron;</td>
+            <td style="text-align: center; ">č</td>
+            <td style="text-align: center; ">ǰ</td>
+            <td style="text-align: center; ">&gamma;</td>
+            <td style="text-align: center; ">&nbsp;</td>
+            <td style="text-align: center; ">&nbsp;</td>
+        </tr>
+    </tbody>
+</table>
+</div></div><!-- diacritical --><div id="ex3a" class="jqmDialog"><div>
+	<span style="font-size:12px;">Note on the transliteration:</span></div>
+<div>
+	<span style="font-size:12px;">The transliteration system of the BP/TLB is based on the Unicode/UTF-8 system. However, there may be difficulties with some of the letters &ndash; particularly on PC/Windows-based systems, but not so much on the Mac. We have chosen the most accepted older and traditional systems of transliteration against, e.g, Wylie for Tibetan, since with Unicode it is possible, in Sanskrit and Tibetan, etc., to represent one sound with one letter in almost all the cases (excepting Sanskrit and Tibetan aspirated letters, and Tibetan tsa, tsha, dza). We thus do not use the Wylie system which widely employs two letters for one sound (ng, ny, sh, zh etc.).</span></div>
+<div>
+	&nbsp;</div>
+<div>
+	<span style="font-size:12px;">Important:</span></div>
+<div>
+	<span style="font-size:12px;">We ask you in particular to note the use of the &rsquo; apostrophe and not the &#39; representing the avagrāha in Sanskrit, and most important the &rsquo;a-chuṅ in Tibetan. On the Mac the &rsquo; is Alt-M.</span></div>
+<div>
+	&nbsp;</div>
+<div>
+	<span style="font-size:12px;">If you cannot find the letters on your key-board, you may click on the link &quot;Diacritica&quot; to access it for your search.</span></div>
+</div><!-- diacritical_doc --><div class='clear'></div><select name='searchmode'><option selected value='phrase'>Search for exact phrase</option>
+<option  value='phraseregex'>Search for exact phrase (regex)</option>
+<option  value='word'>Search for every word in one record</option>
+<option  value='free'>Search for every word fragment in one record</option>
+</select>
+<select name='context'>
+<option ($_GET[context]=="a" ? "selected" : "") value="a"> Search in all libraries</option><option selected value="bTLB">Search in TLB</option><option selected value="v1173">Search in PP: Ratnaguṇasaṃcayagāthā</option></select><div class='clear'></div><a class='sbutton' href='/polyglotta/index.php?page=asearch&amp;bid=2&amp;vid=1173'>Choose specific texts..</a><div class='clear'></div></div></form></div><!-- sok --><div class='clear'></div><!-- clear --><div id='dcr' class='divControlRead'><div class='venstrefulltekstfelt'><div class='bverknavn'><a href='/polyglotta/index.php?page=volume&amp;vid=1173'>PP: Ratnaguṇasaṃcayagāthā</a></div><table class="tlvl2">
+					<tr>
+						<td bgcolor="#ffffff"> &nbsp; &nbsp;
+						<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_7627.Verses41-58" border=0 hspace=2>
+						<a href="/polyglotta/index.php?page=fulltext&amp;view=fulltext&amp;vid=1173" class="ajax_tree0">Complete text</a>
+						</td>
+					</tr>
+				  </table><input type="hidden" name="tree_top_options" id="tree_top_options" value="154423.1.Sarvākārajñatācaryā|154424.2.Śakra|154425.3.Aprameyaguṇadhāraṇapāramitāstūpasatkāra|154426.4.Guṇaparikīrtana|154427.5.Puṇyaparyāya|154428.6.Anumodanā|154429.7.Niraya|154430.8.Viśuddhi|154431.9.Stuti|154432.10.Dhāraṇīguṇa|154433.11.Mārakarma|154434.12.Lokasaṃdarśana|154435.13.Acintya|154436.14.Aupamya|154437.15.Deva|154438.16.Tathatā|154439.17.Avinivartanīyaliṅgākāra|154440.18.Śūnyatā|154441.19.Gaṅgadevābhaginī|154442.20.Upāyakauśalyamīmāṃsā|154443.21.Mārakarma|154444.22.Kalyāṇamitra|154445.23.Śakra|154446.24.Abhimāna|154447.25.Śikṣā|154448.26.Māyopama|154449.27.Sāra|154450.28.Avakīrṇakusuma|154451.29.Anugama|154452.30.Sadāprarudita|154453.31.Dharmodgata|154454.32.Parīndanā|">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154423.1.Sarvākārajñatācaryā" border=0 hspace=2><a id="href_154423.1.Sarvākārajñatācaryā" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987129&level=1&cid=876619" class="ajax_tree0">1. Sarvākārajñatācaryā
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154424.2.Śakra" border=0 hspace=2><a id="href_154424.2.Śakra" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987159&level=1&cid=876649" class="ajax_tree0">2. Śakra
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154425.3.Aprameyaguṇadhāraṇapāramitāstūpasatkāra" border=0 hspace=2><a id="href_154425.3.Aprameyaguṇadhāraṇapāramitāstūpasatkāra" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987174&level=1&cid=876664" class="ajax_tree0">3. Aprameyaguṇadhāraṇapāramitāstūpasatkāra
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154426.4.Guṇaparikīrtana" border=0 hspace=2><a id="href_154426.4.Guṇaparikīrtana" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987184&level=1&cid=876674" class="ajax_tree0">4. Guṇaparikīrtana
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154427.5.Puṇyaparyāya" border=0 hspace=2><a id="href_154427.5.Puṇyaparyāya" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987193&level=1&cid=876683" class="ajax_tree0">5. Puṇyaparyāya
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154428.6.Anumodanā" border=0 hspace=2><a id="href_154428.6.Anumodanā" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987204&level=1&cid=876694" class="ajax_tree0">6. Anumodanā
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154429.7.Niraya" border=0 hspace=2><a id="href_154429.7.Niraya" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987215&level=1&cid=876705" class="ajax_tree0">7. Niraya
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154430.8.Viśuddhi" border=0 hspace=2><a id="href_154430.8.Viśuddhi" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987224&level=1&cid=876714" class="ajax_tree0">8. Viśuddhi
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154431.9.Stuti" border=0 hspace=2><a id="href_154431.9.Stuti" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987230&level=1&cid=876720" class="ajax_tree0">9. Stuti
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154432.10.Dhāraṇīguṇa" border=0 hspace=2><a id="href_154432.10.Dhāraṇīguṇa" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987234&level=1&cid=876724" class="ajax_tree0">10. Dhāraṇīguṇa
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154433.11.Mārakarma" border=0 hspace=2><a id="href_154433.11.Mārakarma" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987246&level=1&cid=876736" class="ajax_tree0">11. Mārakarma
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154434.12.Lokasaṃdarśana" border=0 hspace=2><a id="href_154434.12.Lokasaṃdarśana" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987258&level=1&cid=876748" class="ajax_tree0">12. Lokasaṃdarśana
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154435.13.Acintya" border=0 hspace=2><a id="href_154435.13.Acintya" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987269&level=1&cid=876759" class="ajax_tree0">13. Acintya
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154436.14.Aupamya" border=0 hspace=2><a id="href_154436.14.Aupamya" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987273&level=1&cid=876763" class="ajax_tree0">14. Aupamya
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154437.15.Deva" border=0 hspace=2><a id="href_154437.15.Deva" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987285&level=1&cid=876775" class="ajax_tree0">15. Deva
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154438.16.Tathatā" border=0 hspace=2><a id="href_154438.16.Tathatā" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987295&level=1&cid=876785" class="ajax_tree0">16. Tathatā
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154439.17.Avinivartanīyaliṅgākāra" border=0 hspace=2><a id="href_154439.17.Avinivartanīyaliṅgākāra" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987303&level=1&cid=876793" class="ajax_tree0">17. Avinivartanīyaliṅgākāra
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154440.18.Śūnyatā" border=0 hspace=2><a id="href_154440.18.Śūnyatā" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987312&level=1&cid=876802" class="ajax_tree0">18. Śūnyatā
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154441.19.Gaṅgadevābhaginī" border=0 hspace=2><a id="href_154441.19.Gaṅgadevābhaginī" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987322&level=1&cid=876812" class="ajax_tree0">19. Gaṅgadevābhaginī
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154442.20.Upāyakauśalyamīmāṃsā" border=0 hspace=2><a id="href_154442.20.Upāyakauśalyamīmāṃsā" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987332&level=1&cid=876822" class="ajax_tree0">20. Upāyakauśalyamīmāṃsā
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154443.21.Mārakarma" border=0 hspace=2><a id="href_154443.21.Mārakarma" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987358&level=1&cid=876848" class="ajax_tree0">21. Mārakarma
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154444.22.Kalyāṇamitra" border=0 hspace=2><a id="href_154444.22.Kalyāṇamitra" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987368&level=1&cid=876858" class="ajax_tree0">22. Kalyāṇamitra
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154445.23.Śakra" border=0 hspace=2><a id="href_154445.23.Śakra" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987383&level=1&cid=876873" class="ajax_tree0">23. Śakra
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154446.24.Abhimāna" border=0 hspace=2><a id="href_154446.24.Abhimāna" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987389&level=1&cid=876879" class="ajax_tree0">24. Abhimāna
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154447.25.Śikṣā" border=0 hspace=2><a id="href_154447.25.Śikṣā" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987397&level=1&cid=876887" class="ajax_tree0">25. Śikṣā
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154448.26.Māyopama" border=0 hspace=2><a id="href_154448.26.Māyopama" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987405&level=1&cid=876895" class="ajax_tree0">26. Māyopama
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154449.27.Sāra" border=0 hspace=2><a id="href_154449.27.Sāra" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987415&level=1&cid=876905" class="ajax_tree0">27. Sāra
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154450.28.Avakīrṇakusuma" border=0 hspace=2><a id="href_154450.28.Avakīrṇakusuma" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987426&level=1&cid=876916" class="ajax_tree0">28. Avakīrṇakusuma
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154451.29.Anugama" border=0 hspace=2><a id="href_154451.29.Anugama" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987435&level=1&cid=876925" class="ajax_tree0">29. Anugama
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154452.30.Sadāprarudita" border=0 hspace=2><a id="href_154452.30.Sadāprarudita" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987451&level=1&cid=876941" class="ajax_tree0">30. Sadāprarudita
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154453.31.Dharmodgata" border=0 hspace=2><a id="href_154453.31.Dharmodgata" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987467&level=1&cid=876957" class="ajax_tree0">31. Dharmodgata
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154454.32.Parīndanā" border=0 hspace=2><a id="href_154454.32.Parīndanā" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987487&level=1&cid=876977" class="ajax_tree0">32. Parīndanā
+</td></tr></table>
+<script language=javascript>test('154423.1.Sarvākārajñatācaryā|')</script><div class='bverknavn'><a href='/polyglotta/index.php?page=library&amp;bid=2'>Back to library</a></div></div><!-- venstrefulltekstfelt --><div class="clear"></div><!-- clear --><div id="nav-menu"><ul>
+  		  <li  id="nav-1"><a class="tabValgt" href="/polyglotta/index.php?page=record&amp;view=record&amp;vid=1173&amp;mid=1987129&amp;level=1">Sentence by sentence view</a></li>
+  		  <li  id="nav-2"><a  href="/polyglotta/index.php?page=fulltext&amp;view=fulltext&amp;vid=1173&amp;cid=876619&amp;mid=1987129&amp;level=1">Continuous text view</a></li>
+ 		<li  id="nav-3"><a  href="/polyglotta/admin/index.php?page=fulltext&amp;view=fulltext&amp;vid=1173&amp;cid=876619&amp;mid=1987129&amp;level=1">View in admin</a></li>
+
+  		  </ul></div><div class='clear'></div><!-- clear -->			<script language="javascript" type="text/javascript">
+			var kilderef = '';
+			var tekstid = 0;
+			var tekstid_bilder = 0;
+			var filsti = '';
+			var thumbnail = '';
+			</script>
+		<div class='infofulltekstfelt'><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><div class='kilderef' id='8913829'></div><div class='clear'></div><span id='8913829bi' class='paragraph'>
+							[1. sarvākārajñatācaryāparivarta]&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><div class='kilderef' id='8914202'></div><div class='clear'></div><span id='8914202bi' class='paragraph'>
+							行品第一&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><div class='kilderef' id='8914575'></div><div class='clear'></div><span id='8914575bi' class='paragraph'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><div class='kilderef' id='8914948'></div><div class='clear'></div><span id='8914948bi' class='paragraph'>
+							Chapter I: Preliminary Admonition&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8913830bi' class='paragraph'>
+							para prema gaurava prasāda upasthapitvā prajahitva āvaraṇa kleśamalātikrāntāḥ |<br />śṛṇutā jagārthamabhiprasthita suravratānāṃ prajñāya pāramita yatra caranti śūrāḥ || 1,1 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8914203bi' class='paragraph'>
+							所有菩薩為世間  滅除蓋障煩惱垢<br />發淨信心住寂靜  當行智度彼岸行&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8914576bi' class='paragraph'>
+							dga’ dang gus dang dad pa’i mchog ni nyer bzhag ste || sgrib pa nyon mongs bsal nas dri ma las ’das pa ||<br />’gro don (4) mngon zhugs des pa’i shes rab pha rol phyin || gang la dpa’ rnams spyod pa de ni mnyan par gyis ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='8914949bi' class='paragraph'>
+							“Call forth as much as you can of love, of respect and of faith! <br />Remove the obstructing defilements, and clear away all your taints! <br />Listen to the Perfect Wisdom of the gentle Buddhas, <br />Taught for the weal of the world, for heroic spirits intended!&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8913831bi' class='paragraph'>
+							yāvanti nadya pravahanti ha jambudvīpe phala puṣpa auṣadhādhi vanaspati rohayanti |<br />bhūjata gajendranāgapatiniśrayanovatanasya tasyānubhāvaśriya sābhu jagādhipasya || 1,2 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8914204bi' class='paragraph'>
+							諸江河流閻浮提  華果藥草皆得潤 <br />龍王主住無熱池  彼龍威力流江河&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8914577bi' class='paragraph'>
+							skabs dang po rnam pa thams cad mkhyen pa nyid bstan || ’dzam bu’i gling ’dir chu klung ji (5) snyed cig ’bab cing ||<br /> me tog ’bras ldan sman dang nags tshal skyed byed pa || ma dros gnas pa’i klu dbang klu bdag brten gnas te ||<br />de ni klu yi bdag po de yi mthu dpal yin ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='8914950bi' class='paragraph'>
+							The Source of Subhuti’s Authority<br />The rivers all in this Roseapple Island, <br />Which cause the flowers to grow, the fruits, the herbs and trees, <br />They all derive from the might of the king of the Nagas, <br />From the Dragon residing in Lake Anopatapta, his magical power.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8913832bi' class='paragraph'>
+							yāvanti dharma jinaśrāvaka deśayanti bhāṣanti yuktisahitāṃś ca udīrayanti |<br />paramārthasaukhyakriya tatphalaprāptitā ca sarvo ayaṃ puruṣakāru tathāgatasya || 1,3 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8914205bi' class='paragraph'>
+							亦如佛子聲聞等  說法教他方便說 <br />樂最聖行求果報  此諸如來勝威德&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8914578bi' class='paragraph'>
+							(2a1) rgyal ba’i nyan thos pa dag ji snyed chos ston dang || ’chad dang rigs pa dag dang ldan par brjod pa dang ||<br />mchog ’phags bde ba byed dang de yi ’bras thob pa || de dag kun kyang de bzhin gshegs pa’i skyes bu’i mthu ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='8914951bi' class='paragraph'>
+							Just so, whatever Dharmas the Jina’s disciples establish, <br />Whatever they teach, whatever adroitly explain - <br />Concerning the work of the holy which leads to the fullness of bliss, <br />And also the fruit of this work - it is the Tathagata’s doing.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8913833bi' class='paragraph'>
+							kiṃ kāraṇaṃ ya jina bhāṣati dharmanetrīṃ tatrābhiśikṣita nararṣabhaśiṣyabhūtāḥ |<br />sākṣātkaritva yatha śikṣita deśayanti buddhānubhāva puna ātmabalānubhāvā || 1,4 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8914206bi' class='paragraph'>
+							云何佛說此法眼  令諸弟子如佛學<br />自證教他及方便  此亦佛力非自力&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8914579bi' class='paragraph'>
+							ci phyir zhe na (2) rgyal bas chos tshul gang bstan pa || de la mi mchog slob mar gyur pas mngon bslabs shing ||<br />mngon sum byas nas bslabs pa ji bzhin ston byed de || sangs rgyas mthus byed rang gi stobs kyi mthus ma yin ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='8914952bi' class='paragraph'>
+							For whatever the Jina has taught, the Guide to the Dharma, <br />His pupils, if genuine, have well been trained in it. <br />From direct experience, derived from their training, they teach it, <br />Their teaching stems but from the might of the Buddhas, and not their own power.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8913834bi' class='paragraph'>
+							yasmin na prajñavarapāramitopalabdhiḥ na ca bodhisattva-upalabdhi na cittabodheḥ |<br />evaṃ śruṇitva na ca muhyati nāsti trāso so bodhisattva carate sugatāna prajñām || 1,5 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8914207bi' class='paragraph'>
+							最上般若不可知  非心可知非菩提 <br />如是聞已不驚怖  彼菩薩行知佛智&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8914580bi' class='paragraph'>
+							gang la shes rab pha rol phyin mchog (3) mi dmigs shing || byang chub sems dpa’ mi dmigs byang chub sems mi dmigs ||<br />de skad thos nas rmongs pa med cing skrag med pa || byang chub sems dpa’ de ni bde gshegs shes rab spyod ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='8914953bi' class='paragraph'>
+							The Basic Teachings<br />No wisdom can we get hold of, no highest perfection, <br />No Bodhisattva, no thought of enlightenment either. <br />When told of this, if not bewildered and in no way anxious, <br />A Bodhisattva courses in the Well-Gone’s wisdom.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8913835bi' class='paragraph'>
+							na ca rupa vedana na saṃjña na cetanā ca vijñāna sthānu aṇumātra na bhonti tasya |<br />so sarvadharma-asthito aniketacārī aparīrigṛhīta labhate sugatāna bodhim || 1,6 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8914208bi' class='paragraph'>
+							色受想行識皆無  不著纖塵無處所 <br />彼若不住一切法  行無受想得菩提&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8914581bi' class='paragraph'>
+							gzugs med tshor ba med cing ’du shes sems pa (4) med || de la rnam shes gnas ni rdul tsam yod ma yin ||<br />de chos kun la mi gnas gnas pa med par spyod || yongs su gzung med bde gshegs rnams kyi byang chub ’thob ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='8914954bi' class='paragraph'>
+							In form, in feeling, will, perception and awareness <br />Nowhere in them they find a place to rest on. <br />Without a home they wander, dharmas never hold them, <br />Nor do they grasp at them - the Jina’s Bodhi they are bound to gain.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8913836bi' class='paragraph'>
+							atha śreṇikasya abhutī parivrājakasya jñānopalambhu na hi skandhavibhāvanā ca |<br />yo bodhisattva parijānati eva dharmāṃ na ca nirvṛtiṃ spṛśati so viharāti prajñām || 1,7 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8914209bi' class='paragraph'>
+							菩薩若求出家智  照見五蘊無實相<br />知此不求於寂靜  彼是菩薩之行智&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8914582bi' class='paragraph'>
+							ji ltar kun tu rgyu ba bzo sbyangs shes pa yis || dmigs med phung po rnam (5) par ’jig pa ’byung ba ltar ||<br />byang chub sems dpa’ gang zhig de ltar chos shes pa || mya ngan ’das la mi reg de ni shes rab gnas ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='8914955bi' class='paragraph'>
+							The wanderer Srenika in his gnosis of the truth <br />Could find no basis, though the skandhas had not been undone. <br />Just so the Bodhisattva, when he comprehends the dharmas as he should <br />Does not retire into Blessed Rest. In wisdom then he dwells.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8913837bi' class='paragraph'>
+							vyuparīkṣate punarayaṃ katareṣu prajñā kasmātkuto va imi śūnyaka sarva dharmāḥ |<br />vyuparīkṣamāṇu na ca līyati nāsti trāso āsannu so bhavati bodhayi bodhisattvo || 1,8 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8914210bi' class='paragraph'>
+							復次云何智所得  照見一切法皆空 <br />不著不驚照見時  自覺覺他諸菩薩&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8914583bi' class='paragraph'>
+							yang ’di shes rab ’di ni gang yin su yi yin || gang las yin zhes chos ’di thams cad stong par rtog ||<br />nye bar (6) brtags nas zhum pa med cing skrag med pa || byang chub sems dpa’ de ni byang chub nye ba yin ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='8914956bi' class='paragraph'>
+							What is this wisdom, whose and whence, he queries, <br />And then he finds that all these dharmas are entirely empty. <br />Uncowed and fearless in the face of that discovery <br />Not far from Bodhi is that Bodhi-being then.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8913838bi' class='paragraph'>
+							saci rupa saṃjña api vedana cetanā ca vijñāna skandha caratī aprajānamāno |<br />imi skandha śūnya parikalpayi bodhisattvo caratī nimittaanupādapade asakto || 1,9 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8914211bi' class='paragraph'>
+							色受想行及識蘊  是蘊見行而不知 <br />菩薩照見蘊皆空  行無相化不著句&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8914584bi' class='paragraph'>
+							gal te mi shes bzhin du gzugs su ’du shes shing || tshor ba sems pa rnam shes phung por spyod byed cing ||<br />phung ’di stong zhes rtog na’ang byang chub sems (2b1) dpa’ ni || mtshan ma la spyod skye med gnas la dad ma yin ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='8914957bi' class='paragraph'>
+							To course in the skandhas, in form, in feeling, in perception, <br />Will and so on, and fail to consider them wisely; <br />Or to imagine these skandhas as being empty; <br />Means to course in the sign, the track of non-production ignored.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8913839bi' class='paragraph'>
+							na ca rupa vedana na saṃjña na cetanāyā vijñāni yo na caratī aniketacārī |<br />caratīti so na upagacchati prajñadhārī anupādadhī spṛśati śānti samādhi śreṣṭhām || 1,10 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8914212bi' class='paragraph'>
+							無色受想行識等  不行是名無相行 <br />若行不得最上智  無相寂靜三摩地&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8914585bi' class='paragraph'>
+							gang zhig gzugs min tshor min ’du shes sems pa yin || rnam par shes la mi spyod gnas pa med par spyod ||<br />de ni spyod ces bya bar mi dmigs shes rab brten || skye med blo ldan ting ’dzin zhi ba mchog la (2) reg ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='8914958bi' class='paragraph'>
+							But when he does not course in form, in feeling, or perception, <br />In will or consciousness, but wanders without home, <br />Remaining unaware of coursing firm in wisdom, <br />His thoughts on non-production - then the best of all the calming trances cleaves to him.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8913840bi' class='paragraph'>
+							evātmaśānti viharanniha bodhisattvo so vyākṛto puramakehi tathāgatehi |<br />na ca manyate ahu samādhitu vyutthito vā kasmārtha dharmaprakṛtiṃ parijānayitvā || 1,11 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8914213bi' class='paragraph'>
+							若菩薩行自寂靜  過去諸佛咸授記 <br />身苦樂等皆不及  由知因果法本性&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8914586bi' class='paragraph'>
+							byang chub sems gang de ltar ’dir bdag zhir gnas pa || de ni sngon gyi de bzhin gshegs pas lung bstan yin ||<br />bdag ni mnyam par bzhag ce’am langs zhes rlom sems med || ci phyir zhe na chos kyi rang bzhin yongs shes phyir ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='8914959bi' class='paragraph'>
+							Through that the Bodhisattva now dwells tranquil in himself, <br />His future Buddhahood assured by antecedent Buddhas. <br />Whether absorbed in trance, or whether outside it, he minds not. <br />For of things as they are he knows the essential original nature.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8913841bi' class='paragraph'>
+							evaṃ carantu caratī sugatāna prajñāṃ no cāpi so labhati yatra carāti dharmam |<br />caraṇaṃ ca so ’caraṇaṃ ca prajānayitvā eṣā sa prajñavarapāramitāya caryā || 1,12 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8914214bi' class='paragraph'>
+							若行於法不可得  行如是行乃佛智 <br />行無所行了知已  是行最上般若行&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8914587bi' class='paragraph'>
+							de ltar spyod na bde gshegs (3) rnams kyi shes rab spyod || des ni spyod med spyod pa yin par rab shes phyir ||<br />chos gang spyod pa de yang dmigs par mi ’gyur te || ’di ni shes rab pha rol phyin mchog spyod pa yin ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='8914960bi' class='paragraph'>
+							Coursing thus he courses in the wisdom of the Sugatas, <br />And yet he does not apprehend the dharmas in which he courses. <br />This coursing he wisely knows as a no-coursing, <br />That is his practice of wisdom, the highest perfection.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8913842bi' class='paragraph'>
+							yo ’sau na vidyati sa eṣa avidyamāno tāṃ bālu kalpayi avidya karoti vidyām |<br />vidyā avidya ubhi eti asanta dharmā niryāti yo iti prajānati bodhisattvo || 1,13 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8914215bi' class='paragraph'>
+							彼無所有不可得  愚癡著相謂有無 <br />有無二法皆非實  出此了知乃菩薩&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8914588bi' class='paragraph'>
+							gang zhig yod pa ma yin de ni med ces bya || byis pa rnams kyis de brtags yod dang med (4) par byed ||<br />yod dang med pa ’di gnyis med pa’i chos yin ta || byang chub sems dpa’ gang gis ’di shes nges par ’byung ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='8914961bi' class='paragraph'>
+							What exists not, that non-existent the foolish imagine; <br />Non-existence as well as existence they fashion. <br />As dharmic facts existence and non-existence are both not real. <br />A Bodhisattva goes forth when wisely he knows this.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8913843bi' class='paragraph'>
+							māyopamāṃ ya iha jānati pañca skandhāṃ na ca māya anya na ca skandha karoti anyān |<br />nānātvasaṃjñavigato upaśāntacārī eṣā sa prajñavarapāramitāya caryā || 1,14 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8914216bi' class='paragraph'>
+							菩薩若知諸幻化  色受想行識亦然 <br />寂靜行離種種相  此名最上般若行&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8914589bi' class='paragraph'>
+							gang ’dir phung po lnga dag sgyu ma ’drar shes shing || sgyu ma gzhan dang phung po gzhan du mi byed la ||<br />sna tshogs ’du shes bral zhing nye bar zhi spyod (5) pa || ’di ni shes rab pha rol phyin mchog spyod pa yin ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='8914962bi' class='paragraph'>
+							If he knows the five skandhas as like an illusion, <br />But makes not illusion one thing, and the skandhas another; <br />If, freed from the notion of multiple things, he courses in peace - <br />Then that is his practice of wisdom, the highest perfection.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8913844bi' class='paragraph'>
+							kalyāṇamitrasahitasya vipaśyakasya trāso na bheṣyati śruṇitva jināna mātrām |<br />yo pāpamitrasahito ca parapraṇeyo so āmabhājana yathodakaspṛṣṭa bhinno || 1,15 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8914217bi' class='paragraph'>
+							善友方便令知覺  使聞佛母不驚怖 <br />惡友同行及化他  坏器盛水非堅牢&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8914590bi' class='paragraph'>
+							dge ba’i bshes dang ldan zhing lhag mthong ldan gyur pa || rgyal ba rnams kyi yum thos skrag par yong mi ’gyur ||<br />gang zhig sdig pa’i grogs ldan gzhan gyi dring ’jog pa || de ni snod so ma btang chus reg zhig pa (6) bzhin ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='8914963bi' class='paragraph'>
+							Those with good teachers as well as deep insight, <br />Cannot be frightened on hearing the Mother’s deep tenets. <br />But those with bad teachers, who can be misled by others, <br />Are ruined thereby, as an unbaked pot when in contact with moisture.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8913845bi' class='paragraph'>
+							kiṃ kāraṇaṃ ayu pravucyati bodhisattvo sarvatra saṅgakriya icchati saṅgachedī |<br />bodhiṃ spṛśiṣyati jināna asaṅgabhūtāṃ tasmāddhi nāma labhate ayu bodhisattvo || 1,16 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8914218bi' class='paragraph'>
+							云何得名為菩薩  一切樂行皆無著 <br />求佛菩提無所著  是故得名為菩薩&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8914591bi' class='paragraph'>
+							ci phyir ’di ni byang chub sems dpa’ bya zhe na || chags pa gcod byed kun la chags pa zad par ’dod ||<br />rgyal ba rnams kyi byang chub chags med gyur la reg || des na ’di ni byang chub sems dpa’i ming thob bo ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='8914964bi' class='paragraph'>
+							Three Key Terms Defined<br />What is the reason why we speak of ‘Bodhisattvas'?<br />Desirous to extinguish all attachment, and to cut it off, <br />True non-attachment, or the Bodhi of the Jinas is their future lot.<br />‘Beings who strive for Bodhi’ are they therefore called.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8913846bi' class='paragraph'>
+							mahasattva so ’tha kenocyati kāraṇena mahatāya atra ayu bheṣyati sattvarāśeḥ |<br />dṛṣṭīgatāṃ mahati chindati sattvadhātoḥ mahasattva tena hi pravucyati kāraṇena || 1,17 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8914219bi' class='paragraph'>
+							云何得名摩訶薩  得第一義眾生中 <br />斷眾生界諸邪見  是故得名摩訶薩&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8914592bi' class='paragraph'>
+							ci phyir ’di ni sems dpa’ che zhes bya zhe na || sems (7) can tshogs rnams mang po’i mchog tu gyur pa dang |<br />sems can khams kyi lta rnams chen po gcod pa ste || de phyir sems dpa’ chen po zhes ni rab brjod do ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='8914965bi' class='paragraph'>
+							What is the reason why ‘Great Beings’ are so called? <br />They rise to the highest place above a great number of people; <br />And of a great number of people they cut off mistaken views. <br />That is why we come to speak of them as ‘Great Beings.’&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8913847bi' class='paragraph'>
+							mahanāyako mahatabuddhi mahānubhāvo mahayāna uttamajināna samādhirūḍho |<br />mahatā sanaddhu namuciṃ śaṭha dharṣayiṣye mahasattva tena hi pravucyati kāraṇena || 1,18 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8914220bi' class='paragraph'>
+							大施大慧大威德  佛乘最上而得乘 <br />發菩提心度眾生  是故得名摩訶薩&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8914593bi' class='paragraph'>
+							gtong ba che dang blo che ba dang mthu che dang || rgyal ba rnams kyi theg chen mchog la zhugs pa dang ||<br />go cha (3a1) chen po bgos shing bdud kyi sgyu ’dul ba || de yi phyir na sems dpa’ che zhes rab tu brjod ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='8914966bi' class='paragraph'>
+							Great as a giver, as a thinker, as a power, <br />He mounts upon the vessel of the Supreme Jinas. <br />Armed with the great armour he'll subdue Mara the artful. <br />These are the reasons why ‘Great Beings’ are so called.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8913848bi' class='paragraph'>
+							māyākaro yatha catuṣpathi nirmiṇitvā mahato janasya bahu chindati śīrṣakoṭī |<br />yatha te ca māya tatha jānati sarvasattvāṃ nirmāṇu sarva jagato na ca tasya trāso || 1,19 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8914221bi' class='paragraph'>
+							幻化四足俱胝數  多人眾前悉截首 <br />一切世界皆幻化  菩薩知已得無怖&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8914594bi' class='paragraph'>
+							dper na sgyu ma mkhan gyis bzhi mdor sprul byas te || skye bo phal chen mgo mang bye ba gcod byed pa’i ||<br />gsad bya de dag ci ’dra de ltar byang chub sems || ’gro (2) kun sprul ’dra rab shes de la ’jigs pa med ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='8914967bi' class='paragraph'>
+							This gnosis shows him all beings as like an illusion, <br />Resembling a great crowd of people, conjured up at the crossroads, <br />By a magician, who then cuts off many thousands of heads; <br />He knows this whole living world as a mock show, and yet remains without fear.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8913849bi' class='paragraph'>
+							rupaṃ ca saṃjña api vedana cetanā ca vijñāna bandhu na ca mukta asaṅgabhūto |<br />evaṃ ca bodhi kramate na ca līnacitto saṃnā ha eṣa varapudgala-uttamānām || 1,20 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8914222bi' class='paragraph'>
+							色受想行識纏縛  知不實已不求解 <br />行菩提心無所著  此名最上諸菩薩&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8914595bi' class='paragraph'>
+							gzugs dang ’du shes tshor ba dang ni sems pa dang || rnam par shes pa ma bcings ma grol yod pa min ||<br />de ltar byang chub la ’jug zhum pa’i sems med pa || ’di ni gang zag dam pa rnams kyi go cha mchog ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='8914968bi' class='paragraph'>
+							Form, perception, feeling, will and awareness <br />Are ununited, never bound, cannot be freed. <br />Uncowed in his thought he marches on to his Bodhi, <br />That for the highest of men is the best of all armours.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8913850bi' class='paragraph'>
+							kiṃ kāraṇaṃ ayu pravucyati bodhiyāno yatrāruhitva sa nirvāpayi sarvasattvān |<br />ākāśatulya ayu yāna mahāvimāno sukhasaukhyakṣemabhiprāpaṇu yānaśreṣṭho || 1,21 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8914223bi' class='paragraph'>
+							云何得名為菩薩  乘大乘行度眾生 <br />大乘體相如虛空  菩薩由得安隱樂&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8914596bi' class='paragraph'>
+							ci phyir ’di ni byang (3) chub theg chen bya zhe na || de gang zhon nas sems can thams cad mya ngan zlo ||<br />theg pa ’di ni mkha’ ’dra gzhal med khang chen te || dga’ skyid bde ba mngon par ’thob byed theg pa’i mchog ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='8914969bi' class='paragraph'>
+							What then again is ‘the vessel that leads to the Bodhi'? <br />Mounted upon it one guides to Nirvana all beings. <br />Great is that vessel, immense, vast like the vastness of space. <br />Those who travel upon it are carried to safety, delight and ease.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8913851bi' class='paragraph'>
+							na ca labhyate ya vrajate diśa āruhitvā nirvāṇa-okagamanaṃ gati nopalabdhiḥ |<br />yatha agni nirvṛtu na tasya gatipracāro so tena nirvṛti pravucyati kāraṇena || 1,22 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8914224bi' class='paragraph'>
+							大乘之乘不可得  乘涅盤往諸方所 <br />行已不見如火滅  是故名為入涅盤&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8914597bi' class='paragraph'>
+							gang zhig zhon nas phyogs su ’gro ba dmigs su med || mya ngan ’das par ’gro bar (4) gsungs pa ’gro mi dmigs ||<br />dper na mi shi de yis ’gro rgyu med pa bzhin || rgyu des de ni mya ngan ’das zhes rab tu brjod ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='8914970bi' class='paragraph'>
+							The Transcendental Nature of Bodhisattvas<br />Thus transcending the world, he eludes our apprehensions.<br />‘He goes to Nirvana,’ but no one can say where he went to. <br />A fire’s extinguished, but where, do we ask, has it gone to? <br />Likewise, how can we find him who has found the Rest of the Blessed?&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8913852bi' class='paragraph'>
+							pūrvāntato na upalabhyati bodhisattvo aparāntato ’pi pratiupanna triyadhvaśuddho |<br />yo śuddha so anabhisaṃskṛtu niṣprapañco eṣā sa prajñavarapāramitāya caryā || 1,23 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8914225bi' class='paragraph'>
+							行已不見如火滅  是故名為入涅盤 <br />菩薩所行不可得  初後現在三清淨&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8914598bi' class='paragraph'>
+							byang chub sems dpa’ sngon gyi mtha’ dang phyi mtha’ dang || da ltar byung bar mi dmigs dus gsum dag pa ste ||<br />gang dag de ni ’dus ma byas yin (5) spros med de || ’di ni shes rab pha rol phyin mchog spyod pa yin ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='8914971bi' class='paragraph'>
+							The Bodhisattva’s past, his future and his present must elude us, <br />Time’s three dimensions nowhere touch him. <br />Quite pure he is, free from conditions, unimpeded. <br />That is his practice of wisdom, the highest perfection.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8913853bi' class='paragraph'>
+							yasmiṃś ca kāli samaye vidu bodhisattvo evaṃ carantu anupādu vicintayitvā |<br />mahatīṃ janeti karuṇāṃ na ca sattvasaṃjñā eṣā sa prajñavarapāramitāya caryā || 1,24 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8914226bi' class='paragraph'>
+							清淨無畏無戲論  是行最上般若行 <br />大智菩薩行行時  發大慈悲為眾生&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8914599bi' class='paragraph'>
+							byang chub sems dpa’ mkhas rig gang gi dus kyi tshe || skye med rnam par bsams te ’di ltar spyod byed cing ||<br />snying rje chen po bskyed kyang sems can ’du shes med || ’di ni shes rab pha rol phyin mchog (6) spyod pa yin ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='8914972bi' class='paragraph'>
+							Wise Bodhisattvas, coursing thus, reflect on non-production, <br />And yet, while doing so, engender in themselves the great compassion, <br />Which is, however, free from any notion of a being.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8913854bi' class='paragraph'>
+							saci sattvasaṃjña dukhasaṃjña upādayātī hariṣyāmi duḥkha jagatīṃ kariṣyāmi artham |<br />so ātmasa(ttva) parikalpaku bodhisattvo na ca eṣa prajñavarapāramitāya caryā || 1,25 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8914227bi' class='paragraph'>
+							為已不起眾生相  是行最上般若行<br />菩薩起念為眾生  修諸苦行有苦相<br />是有我相眾生相  此非最上般若行&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8914600bi' class='paragraph'>
+							gal te sems can ’du shes sdug bsngal ’du shes skyed || ’gro ba rnams kyi don bya sdug bsngal spang snyam ste ||<br />bdag dang sems can yongs rtog byang chub sems dpa’ ste || ’di ni shes rab pha rol phyin mchog spyod ma yin ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='8914973bi' class='paragraph'>
+							Thereby they practise wisdom, the highest perfection.<br />But when the notion of suffering and beings leads him to think: <br />‘Suffering I shall remove, the weal of the world I shall work!’ Beings are then imagined, a self is imagined, - <br />The practice of wisdom, the highest perfection, is lacking.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8913855bi' class='paragraph'>
+							yatha ātmanaṃ tatha prajānati sarvasattvāṃ yatha sarvasattva tatha prajānati sarvadharmān |<br />anupādupādu ubhaye avikalpamāno eṣā sa prajñavarapāramitāya caryā || 1,26 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8914228bi' class='paragraph'>
+							知自及諸眾生等  乃至諸法亦復然 <br />生滅無二無分別  是行最上般若行&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8914601bi' class='paragraph'>
+							bdag ci ’dra ba de ’drar sems (7) can thams cad shes || sems can thams cad ci ’drar de ’drar chos kun shes ||<br />skye ba med dang skye ba gnyi gar mi rtog pa || ’di ni shes rab pha rol phyin mchog spyod pa yin ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='8914974bi' class='paragraph'>
+							He wisely knows that all that lives is unproduced as he himself is; <br />He knows that all that is no more exists than he or any beings. <br />The unproduced and the produced are not distinguished, <br />That is the practice of wisdom, the highest perfection.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8913856bi' class='paragraph'>
+							yāvanti loki parikīrtita dharmanāma sarveṣu pādasamatikramu nirgamitvā |<br />amṛtaṃ ti jñānu paramaṃ na tu yo pareṇa ekārtha prajña ayu pāramiteti nāmā || 1,27 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8914229bi' class='paragraph'>
+							乃至所說世界等  名離一切生滅法 <br />最上無比甘露智  是故得名為般若&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8914602bi' class='paragraph'>
+							’jig rten dag na chos ming ji snyed yongs brjod pa || kun la skye ba dang ni yang dag ’das (3b1) spangs nas ||<br />ye shes ’chi med dam pa de las gzhan med ’thob || de phyir ’di ni shes rab pha rol phyin ces bya ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='8914975bi' class='paragraph'>
+							All words for things in use in this world must be left behind, <br />All things produced and made must be transcended - <br />The deathless, the supreme, incomparable gnosis is then won. <br />That is the sense in which we speak of perfect wisdom.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8913857bi' class='paragraph'>
+							evaṃ carantu na ca kāṅkṣati bodhisattvo jñātavya yo vihara te sa upāyaprajño |<br />prakṛtīasanta parijānayamāna dharmāṃ eṣā sa prajñavarapāramitāya caryā || 1,28 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8914230bi' class='paragraph'>
+							菩薩如是所行行  了知方便無所求 <br />知此法本性非實  是行最上般若行&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8914603bi' class='paragraph'>
+							byang chub sems dpa’ gang zhig dogs med de ltar spyod || shes rab ldan te mnyam nyid gnas par shes par bya ||<br />chos rnams rang bzhin med par yongs su shes (2) gyur pa || ’di ni shes rab pha rol phyin mchog spyod pa yin ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='8914976bi' class='paragraph'>
+							When free from doubts the Bodhisattva carries on his practice, <br />As skilled in wisdom he is known to dwell. <br />All dharmas are not really there, their essential original nature is empty. <br />To comprehend that is the practice of wisdom, perfection supreme.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8913858bi' class='paragraph'>
+							bhagavatyāṃ ratnaguṇasaṃcayagāthāyāṃ sarvākārajñatācaryāparivarto nāma prathamaḥ ||&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "8913829";
+							kilderef = "Rgs Rgs verse  - Rgs verse ";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8914231bi' class='paragraph'>
+							&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "8914202";
+							kilderef = "Rgs T.229, Fa-xian (法賢法師), A.D. 991  - T.229, Fa-xian (法賢法師), A.D. 991 ";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8914604bi' class='paragraph'>
+							&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "8914575";
+							kilderef = "Rgs Kj, sher rab sna tshogs, ka  1b3 - Kj, sher rab sna tshogs, ka 3b2";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='textvar' style='width:24%;'><div class='English'><span id='8914977bi' class='paragraph'>
+							&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "8914948";
+							kilderef = "Rgs Conze (1973)  - Conze (1973) ";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'></div><div class='textvar' style='width:24%;'></div><div class='textvar' style='width:24%;'></div><div class='textvar' style='width:24%;'></div></div><div class='clear'></div><div class="fontboks"><a onClick=onOffdiv('permlink') name="permlink" href="#permlink">Permanent link</a></div><div class='clear'></div><div class='perm_felt' id='permlink'>http://www2.hf.uio.no/common/apps/permlink/permlink.php?app=polyglotta&amp;context=ctext&amp;uid=ec86c9d4-5119-11e6-98cc-0050569f23b2</div></div></div><!-- infofelt --></div><!-- divControl --><div class="clear"></div>
+<div style="clear:both"></div><div class="signatur"><div class="signatur_left">
+		<a href="https://wiki.uio.no/hf/dmlf/index.php/Kategori:Polyglotta:Documentation">Go to Wiki Documentation</a></br>Enhet: <a HREF=http://www.hf.uio.no>Det humanistiske fakultet</a> &nbsp; Utviklet av: <a href="http://www.hf.uio.no/tjenester/it">IT-seksjonen ved HF</a></div><!--signatur_left -->
+		<div class="signatur_right"><a href="/polyglotta/admin/index.php">Login</a></div>
+		<div style="clear:both"></div></div>
+</body></html><SCRIPT LANGUAGE="JAVASCRIPT">
+	
+	$("#tr_IA").click(function(){
+	    if ($("#toggle_container_IA").is(':hidden'))
+	    	$("#toggle_container_IA").show();
+	    else{
+	        $("#toggle_container_IA").hide();
+	    }
+	    return false;
+		});
+
+	$("#tr_lang").click(function(){
+	    if ($("#toggle_container_lan").is(':hidden'))
+	    	$("#toggle_container_lan").show();
+	    else{
+	        $("#toggle_container_lan").hide();
+	    }
+	    return false;
+	});
+
+	$("#tr_img").click(function(){
+	    if ($("#toggle_container_img").is(':hidden'))
+	    	$("#toggle_container_img").show();
+	    else{
+	        $("#toggle_container_img").hide();
+	    }
+	    return false;
+	});
+
+	$("#diac2button").click(function(){
+	   if ($("#ex3a").is(':hidden')){
+		   $("#ex3a").show();
+	       $("#diac2button").html("Hide&#32Diacritica-help");
+	   }else{
+	       $("#ex3a").hide();
+	       $("#diac2button").html("Diacritica-help");
+	   }
+	   return false;
+	});
+
+	$("#diacbutton").click(function(){
+	   if ($("#diacritical_sign").is(':hidden')){
+		   	$("#diacritical_sign").show();
+	      	$("#diacbutton").html("Hide&#32diacritica");
+	   }else{
+	        $("#diacritical_sign").hide();
+	        $("#diacbutton").html("Diacritica");
+	   }
+	   return false;
+    });
+
+	$('#toggle_container_IA').click(function(e) {
+	   e.stopPropagation();
+	});
+
+	$('#toggle_container_lan').click(function(e) {
+        e.stopPropagation();
+    });
+
+	$('#toggle_container_img').click(function(e) {
+        e.stopPropagation();
+    });
+
+	$('#ex3a').click(function(e) {
+	    e.stopPropagation();
+	});
+
+	$('#diacritical_sign').click(function(e) {
+        e.stopPropagation();
+    });
+
+	//Kode for å sette inn diakritiske tegn
+	$('#diacritical > tbody > tr > td').click(function() {
+	  	//alert('red');
+		$("#sokeboks").val($("#sokeboks").val() + $(this).text());
+	});
+
+	$('.diac2button').text(($('.diacbutton').text() == 'Diacritica-help') ? 'Hide Diacritica-help' : 'Diacritica-help');
+	
+	//Lukker alle åpnede pop'uper ved klikk på siden
+	$(document).click(function() {
+		$('#toggle_container_IA').hide();
+	    
+        $('#toggle_container_lan').hide();
+    
+        $('#toggle_container_img').hide();
+   
+   		$('#diacritical_sign').hide();
+   		$("#diacbutton").html("Diacritica");
+   
+       	$('#ex3a').hide();
+       	$("#diac2button").html("Diacritica-help");
+   });
+	</SCRIPT>

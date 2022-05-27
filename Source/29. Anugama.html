@@ -1,0 +1,479 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Bibliotheca Polyglotta</title>
+<link rel='stylesheet' type='text/css' href='css/bp.css'>
+<link rel='stylesheet' type='text/css' href='css/diac_doc.css'>
+
+<link rel='stylesheet' type='text/css' href='css/imageGallery.css'>
+<link rel='stylesheet' type='text/css' href='css/ss.css'>
+	      <link rel='stylesheet' type='text/css' href='css/tree_menu.css'>
+<script type="text/javascript" src="js/jquery-1.3.2.js"></script>
+<!--  <script type="text/javascript" src="js/jqModal.js"></script>-->
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/tree_menu.js"></script>
+<!-- <script src="js/analytics_tracking.js" type="text/javascript"></script> -->
+
+
+<!-- <script type="text/javascript" src="js/popupDivhandling.js"></script> -->
+<!--  <script type="text/javascript" src="jquery-latest.js"></script>
+<script type="text/javascript" src="js/jquery-imagegallery.js"></script>-->
+</head>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//vrtx.uio.no/js/analytics/v2/analytics.js','ga');
+
+ga('create', 'UA-86407471-1', 'auto');
+ga(function(tracker) {
+
+	// Modifies sendHitTask to hit ipproxy instead of http://www.google-analytics.com directly
+	tracker.set('sendHitTask', function(model) {
+		payload = model.get('hitPayload');
+		var xhr = new XMLHttpRequest();
+		xhr.open('GET', '//w3prod-ipproxy.uio.no/collect' +'?' + payload, true);
+		xhr.send();
+	});
+		ga('send', 'pageview');
+});
+</script>
+<body><div class='banner'></div><!-- banner --><div class='uiologo'>
+<a href='http://www.hf.uio.no/'><img src='https://www2.hf.uio.no/polyglotta/hfe.png' border='0'></a></div><!-- uiologo --><div class='clear'></div>
+<div class='smule_tittel'>
+<div class='brodsmuleboks'>You are here: <a href='/polyglotta/index.php' accesskey='1'> BP HOME</a> >  <a href='/polyglotta/index.php?page=library&amp;bid=2' accesskey='1'>TLB</a> > <a href='/polyglotta/index.php
+	?page=volume&amp;vid=1173' accesskey='1'>PP: Ratnaguṇasaṃcayagāthā</a> > fulltext</div><div class='clear'></div>
+<div class='headline'>PP: Ratnaguṇasaṃcayagāthā<div class='clear'></div></div><!-- headline -->
+</div><!-- smule_tittel -->
+<!--<div>-->
+
+<h2 class="trigger" id="tr_lang"><a  href="#">Choose languages</a></h2>
+<h2 class="trigger" id="tr_img"><a  href="#">Choose images, etc.</a></h2>
+
+
+<div id="toggle_container_lan">
+
+<form  id="tr"  name="Sprakvalg2" action="inc/set_cookie_lan.php" method="POST">
+
+<div style="float:left; width:auto; text-align:left; margin-left:20px;">
+<h5>Choose languages</h5>
+<ul>
+<input value="Choose all" type="button" onClick="markAll('tr')"><input value="Uncheck all" type="button" onClick="markNone('tr')">
+
+	<li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1173[6266]" value="6266" id="lancheckbox" checked >Sanskrit: Rgs verse</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1173[6267]" value="6267" id="lancheckbox" checked >Chinese: T.229, Fa-xian (法賢法師), A.D. 991</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1173[6268]" value="6268" id="lancheckbox" checked >Tibetan: Kj, sher rab sna tshogs, ka</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1173[6269]" value="6269" id="lancheckbox" checked >English: Conze (1973)</label></li><div style="clear:both"></div>
+<input type='submit' name='set_cookie' value='Save view'>
+<div style="clear:both"></div>
+
+</ul>
+<input type="hidden" name="vid" value="1173">
+<input type="hidden" name="page" value="fulltext">
+</form>
+</div>
+</div>
+
+<div id="toggle_container_img">
+<form  id="tr"  name="Sprakvalg2" action="inc/set_cookie_img.php" method="POST">
+
+<div style="float:left; width:auto; text-align: left;">
+<h5>Choose display</h5>
+<ul>
+		
+	<li> 
+		<input type='checkbox' name='bilder' checked="checked" > Enable images
+	</li>
+	<li> 
+	<input type='checkbox' onclick="onOffCheckbox();" name='fotnoter' checked="checked"> Enable footnotes
+	<div id="pff" style="display:block" >
+	<ul>
+	<li><input type='radio' name='fotnote_valg'  value='show_a' checked> Show all footnotes</li>
+	<li><input type='radio' name='fotnote_valg'  value='show_h'  > Minimize footnotes</li>
+	</ul>
+	</li>
+	
+	</div>
+	<div style="float:left; width:20em; text-align: left; margin-left:120px ">
+	<div style="clear:both"></div>
+	<input type='submit' name='set_cookie' value='Save view'>
+	<div style="clear:both"></div>
+	</div>
+	
+</ul>
+<input type="hidden" name="vid" value="1173">
+<input type="hidden" name="page" value="fulltext">
+</form>
+</div>
+	
+
+
+
+</div>
+</div>
+
+<div class='sok'><form name='Sok' id='FormBlock' action='/polyglotta/index.php' method='get'>
+<input type='hidden' name='page' value='search'>
+<input type='hidden' name='bid' value='2'>
+<input type='hidden' name='vid' value='1173'>
+<div class='sokeboks'>
+<input name='sokefelt' id='sokeboks' type='text' size='30' value=''>
+<input type='submit' name='Sok' value='Search' id='nsubmit'>
+<div class='clear'></div><a class="diacbutton" id="diacbutton" href="#">Diacritica</a><a id="diac2button" class="diac2button"  href="#">Diacritica-help</a><a class="s2button" href="https://wiki.uio.no/hf/dmlf/index.php/Kategori:Polyglotta:Documentation:SearchHelp">Search-help</a><div class='diacritical' id='diacritical_sign'><div style="text-align: left; ">
+<table class = 'diacritica' width="200" border="1" cellpadding="1" cellspacing="1" id="diacritical">
+    <tbody>
+        <tr>
+            <td style="text-align: center; ">ā</td>
+            <td style="text-align: center; ">ī</td>
+            <td style="text-align: center; ">ū</td>
+            <td style="text-align: center; ">ṛ</td>
+            <td style="text-align: center; ">ṝ</td>
+            <td style="text-align: center; ">ḷ</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">ḹ</td>
+            <td style="text-align: center; ">&rsquo;</td>
+            <td style="text-align: center; ">ṃ</td>
+            <td style="text-align: center; ">ḥ</td>
+            <td style="text-align: center; ">ṅ</td>
+            <td style="text-align: center; ">&ntilde;</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">ṭ</td>
+            <td style="text-align: center; ">ḍ</td>
+            <td style="text-align: center; ">ṇ</td>
+            <td style="text-align: center; ">ṣ</td>
+            <td style="text-align: center; ">ś</td>
+            <td style="text-align: center; ">ź</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">&scaron;</td>
+            <td style="text-align: center; ">č</td>
+            <td style="text-align: center; ">ǰ</td>
+            <td style="text-align: center; ">&gamma;</td>
+            <td style="text-align: center; ">&nbsp;</td>
+            <td style="text-align: center; ">&nbsp;</td>
+        </tr>
+    </tbody>
+</table>
+</div></div><!-- diacritical --><div id="ex3a" class="jqmDialog"><div>
+	<span style="font-size:12px;">Note on the transliteration:</span></div>
+<div>
+	<span style="font-size:12px;">The transliteration system of the BP/TLB is based on the Unicode/UTF-8 system. However, there may be difficulties with some of the letters &ndash; particularly on PC/Windows-based systems, but not so much on the Mac. We have chosen the most accepted older and traditional systems of transliteration against, e.g, Wylie for Tibetan, since with Unicode it is possible, in Sanskrit and Tibetan, etc., to represent one sound with one letter in almost all the cases (excepting Sanskrit and Tibetan aspirated letters, and Tibetan tsa, tsha, dza). We thus do not use the Wylie system which widely employs two letters for one sound (ng, ny, sh, zh etc.).</span></div>
+<div>
+	&nbsp;</div>
+<div>
+	<span style="font-size:12px;">Important:</span></div>
+<div>
+	<span style="font-size:12px;">We ask you in particular to note the use of the &rsquo; apostrophe and not the &#39; representing the avagrāha in Sanskrit, and most important the &rsquo;a-chuṅ in Tibetan. On the Mac the &rsquo; is Alt-M.</span></div>
+<div>
+	&nbsp;</div>
+<div>
+	<span style="font-size:12px;">If you cannot find the letters on your key-board, you may click on the link &quot;Diacritica&quot; to access it for your search.</span></div>
+</div><!-- diacritical_doc --><div class='clear'></div><select name='searchmode'><option selected value='phrase'>Search for exact phrase</option>
+<option  value='phraseregex'>Search for exact phrase (regex)</option>
+<option  value='word'>Search for every word in one record</option>
+<option  value='free'>Search for every word fragment in one record</option>
+</select>
+<select name='context'>
+<option ($_GET[context]=="a" ? "selected" : "") value="a"> Search in all libraries</option><option selected value="bTLB">Search in TLB</option><option selected value="v1173">Search in PP: Ratnaguṇasaṃcayagāthā</option></select><div class='clear'></div><a class='sbutton' href='/polyglotta/index.php?page=asearch&amp;bid=2&amp;vid=1173'>Choose specific texts..</a><div class='clear'></div></div></form></div><!-- sok --><div class='clear'></div><!-- clear --><div id='dcr' class='divControlRead'><div class='venstrefulltekstfelt'><div class='bverknavn'><a href='/polyglotta/index.php?page=volume&amp;vid=1173'>PP: Ratnaguṇasaṃcayagāthā</a></div><table class="tlvl2">
+					<tr>
+						<td bgcolor="#ffffff"> &nbsp; &nbsp;
+						<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_7627.Verses41-58" border=0 hspace=2>
+						<a href="/polyglotta/index.php?page=fulltext&amp;view=fulltext&amp;vid=1173" class="ajax_tree0">Complete text</a>
+						</td>
+					</tr>
+				  </table><input type="hidden" name="tree_top_options" id="tree_top_options" value="154423.1.Sarvākārajñatācaryā|154424.2.Śakra|154425.3.Aprameyaguṇadhāraṇapāramitāstūpasatkāra|154426.4.Guṇaparikīrtana|154427.5.Puṇyaparyāya|154428.6.Anumodanā|154429.7.Niraya|154430.8.Viśuddhi|154431.9.Stuti|154432.10.Dhāraṇīguṇa|154433.11.Mārakarma|154434.12.Lokasaṃdarśana|154435.13.Acintya|154436.14.Aupamya|154437.15.Deva|154438.16.Tathatā|154439.17.Avinivartanīyaliṅgākāra|154440.18.Śūnyatā|154441.19.Gaṅgadevābhaginī|154442.20.Upāyakauśalyamīmāṃsā|154443.21.Mārakarma|154444.22.Kalyāṇamitra|154445.23.Śakra|154446.24.Abhimāna|154447.25.Śikṣā|154448.26.Māyopama|154449.27.Sāra|154450.28.Avakīrṇakusuma|154451.29.Anugama|154452.30.Sadāprarudita|154453.31.Dharmodgata|154454.32.Parīndanā|">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154423.1.Sarvākārajñatācaryā" border=0 hspace=2><a id="href_154423.1.Sarvākārajñatācaryā" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987129&level=1&cid=876619" class="ajax_tree0">1. Sarvākārajñatācaryā
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154424.2.Śakra" border=0 hspace=2><a id="href_154424.2.Śakra" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987159&level=1&cid=876649" class="ajax_tree0">2. Śakra
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154425.3.Aprameyaguṇadhāraṇapāramitāstūpasatkāra" border=0 hspace=2><a id="href_154425.3.Aprameyaguṇadhāraṇapāramitāstūpasatkāra" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987174&level=1&cid=876664" class="ajax_tree0">3. Aprameyaguṇadhāraṇapāramitāstūpasatkāra
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154426.4.Guṇaparikīrtana" border=0 hspace=2><a id="href_154426.4.Guṇaparikīrtana" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987184&level=1&cid=876674" class="ajax_tree0">4. Guṇaparikīrtana
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154427.5.Puṇyaparyāya" border=0 hspace=2><a id="href_154427.5.Puṇyaparyāya" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987193&level=1&cid=876683" class="ajax_tree0">5. Puṇyaparyāya
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154428.6.Anumodanā" border=0 hspace=2><a id="href_154428.6.Anumodanā" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987204&level=1&cid=876694" class="ajax_tree0">6. Anumodanā
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154429.7.Niraya" border=0 hspace=2><a id="href_154429.7.Niraya" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987215&level=1&cid=876705" class="ajax_tree0">7. Niraya
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154430.8.Viśuddhi" border=0 hspace=2><a id="href_154430.8.Viśuddhi" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987224&level=1&cid=876714" class="ajax_tree0">8. Viśuddhi
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154431.9.Stuti" border=0 hspace=2><a id="href_154431.9.Stuti" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987230&level=1&cid=876720" class="ajax_tree0">9. Stuti
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154432.10.Dhāraṇīguṇa" border=0 hspace=2><a id="href_154432.10.Dhāraṇīguṇa" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987234&level=1&cid=876724" class="ajax_tree0">10. Dhāraṇīguṇa
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154433.11.Mārakarma" border=0 hspace=2><a id="href_154433.11.Mārakarma" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987246&level=1&cid=876736" class="ajax_tree0">11. Mārakarma
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154434.12.Lokasaṃdarśana" border=0 hspace=2><a id="href_154434.12.Lokasaṃdarśana" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987258&level=1&cid=876748" class="ajax_tree0">12. Lokasaṃdarśana
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154435.13.Acintya" border=0 hspace=2><a id="href_154435.13.Acintya" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987269&level=1&cid=876759" class="ajax_tree0">13. Acintya
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154436.14.Aupamya" border=0 hspace=2><a id="href_154436.14.Aupamya" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987273&level=1&cid=876763" class="ajax_tree0">14. Aupamya
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154437.15.Deva" border=0 hspace=2><a id="href_154437.15.Deva" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987285&level=1&cid=876775" class="ajax_tree0">15. Deva
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154438.16.Tathatā" border=0 hspace=2><a id="href_154438.16.Tathatā" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987295&level=1&cid=876785" class="ajax_tree0">16. Tathatā
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154439.17.Avinivartanīyaliṅgākāra" border=0 hspace=2><a id="href_154439.17.Avinivartanīyaliṅgākāra" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987303&level=1&cid=876793" class="ajax_tree0">17. Avinivartanīyaliṅgākāra
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154440.18.Śūnyatā" border=0 hspace=2><a id="href_154440.18.Śūnyatā" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987312&level=1&cid=876802" class="ajax_tree0">18. Śūnyatā
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154441.19.Gaṅgadevābhaginī" border=0 hspace=2><a id="href_154441.19.Gaṅgadevābhaginī" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987322&level=1&cid=876812" class="ajax_tree0">19. Gaṅgadevābhaginī
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154442.20.Upāyakauśalyamīmāṃsā" border=0 hspace=2><a id="href_154442.20.Upāyakauśalyamīmāṃsā" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987332&level=1&cid=876822" class="ajax_tree0">20. Upāyakauśalyamīmāṃsā
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154443.21.Mārakarma" border=0 hspace=2><a id="href_154443.21.Mārakarma" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987358&level=1&cid=876848" class="ajax_tree0">21. Mārakarma
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154444.22.Kalyāṇamitra" border=0 hspace=2><a id="href_154444.22.Kalyāṇamitra" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987368&level=1&cid=876858" class="ajax_tree0">22. Kalyāṇamitra
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154445.23.Śakra" border=0 hspace=2><a id="href_154445.23.Śakra" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987383&level=1&cid=876873" class="ajax_tree0">23. Śakra
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154446.24.Abhimāna" border=0 hspace=2><a id="href_154446.24.Abhimāna" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987389&level=1&cid=876879" class="ajax_tree0">24. Abhimāna
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154447.25.Śikṣā" border=0 hspace=2><a id="href_154447.25.Śikṣā" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987397&level=1&cid=876887" class="ajax_tree0">25. Śikṣā
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154448.26.Māyopama" border=0 hspace=2><a id="href_154448.26.Māyopama" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987405&level=1&cid=876895" class="ajax_tree0">26. Māyopama
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154449.27.Sāra" border=0 hspace=2><a id="href_154449.27.Sāra" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987415&level=1&cid=876905" class="ajax_tree0">27. Sāra
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154450.28.Avakīrṇakusuma" border=0 hspace=2><a id="href_154450.28.Avakīrṇakusuma" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987426&level=1&cid=876916" class="ajax_tree0">28. Avakīrṇakusuma
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154451.29.Anugama" border=0 hspace=2><a id="href_154451.29.Anugama" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987435&level=1&cid=876925" class="ajax_tree0">29. Anugama
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154452.30.Sadāprarudita" border=0 hspace=2><a id="href_154452.30.Sadāprarudita" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987451&level=1&cid=876941" class="ajax_tree0">30. Sadāprarudita
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154453.31.Dharmodgata" border=0 hspace=2><a id="href_154453.31.Dharmodgata" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987467&level=1&cid=876957" class="ajax_tree0">31. Dharmodgata
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154454.32.Parīndanā" border=0 hspace=2><a id="href_154454.32.Parīndanā" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1173&mid=1987487&level=1&cid=876977" class="ajax_tree0">32. Parīndanā
+</td></tr></table>
+<script language=javascript>test('154451.29.Anugama|')</script><div class='bverknavn'><a href='/polyglotta/index.php?page=library&amp;bid=2'>Back to library</a></div></div><!-- venstrefulltekstfelt --><div class="clear"></div><!-- clear --><div id="nav-menu"><ul>
+  		  <li  id="nav-1"><a class="tabValgt" href="/polyglotta/index.php?page=record&amp;view=record&amp;vid=1173&amp;mid=1987435&amp;level=1">Sentence by sentence view</a></li>
+  		  <li  id="nav-2"><a  href="/polyglotta/index.php?page=fulltext&amp;view=fulltext&amp;vid=1173&amp;cid=876925&amp;mid=1987435&amp;level=1">Continuous text view</a></li>
+ 		<li  id="nav-3"><a  href="/polyglotta/admin/index.php?page=fulltext&amp;view=fulltext&amp;vid=1173&amp;cid=876925&amp;mid=1987435&amp;level=1">View in admin</a></li>
+
+  		  </ul></div><div class='clear'></div><!-- clear -->			<script language="javascript" type="text/javascript">
+			var kilderef = '';
+			var tekstid = 0;
+			var tekstid_bilder = 0;
+			var filsti = '';
+			var thumbnail = '';
+			</script>
+		<div class='infofulltekstfelt'><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><div class='kilderef' id='8914135'></div><div class='clear'></div><span id='8914135bi' class='paragraph'>
+							[29. Anugamaparivarta]&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><div class='kilderef' id='8914508'></div><div class='clear'></div><span id='8914508bi' class='paragraph'>
+							佛母宝德藏般若伽陀<br />聚集品第二十九&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><div class='kilderef' id='8914881'></div><div class='clear'></div><span id='8914881bi' class='paragraph'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><div class='kilderef' id='8915254'></div><div class='clear'></div><span id='8915254bi' class='paragraph'>
+							Chapter XXIX The Perfection of Concentration&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8914136bi' class='paragraph'>
+							caturbhī ca dhyāna viharanti mahānubhāvā na ca ālayo na pi ca niśrayu kurvayāti |<br />api kho punāśrayu ime catudhyāna sāṅgā bheṣyanti bodhivara-uttamaprāpaṇāya || 29,1 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8914509bi' class='paragraph'>
+							大菩薩修四禪定  如所愛樂而無住 <br />或復不住於四禪  當得最上之菩提&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8914882bi' class='paragraph'>
+							mthu chen ldan pa bsam gtan bzhis kyang gnas byed la || rten par byed pa ma yin gnas par byed pa med ||<br />’on kyang bsam gtan yan lag bcas (4) pa bzhi po ’di || byang chub dam pa mchog thob pa yi rten du ’gyur ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='8915255bi' class='paragraph'>
+							Those of great might who dwell in the four Trances <br />Do not make them into a place to settle down in, nor into a home. <br />But these four Trances, with their limbs, will in their turn become <br />The basis for the attainment of the supreme and unsurpassed enlightenment.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8914137bi' class='paragraph'>
+							dhyāne sthito ’tra bhavatī varaprajñalābhī ārūpyarūpi ca samādhi catasra śreṣṭhā |<br />upakāribhūta imi dhyāna varāgrabodhau na punāsravakṣati sa śikṣati bodhisattvo || 29,2 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8914510bi' class='paragraph'>
+							得最般若住禪定  四無色等三摩地 <br />為得最上大禪定  而復不學諸漏盡&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8914883bi' class='paragraph'>
+							shes rab mchog thob bsam gtan dag la gnas pa ni || gzugs med ting ’dzin dam pa bzhi yang nyams su myong ||<br />bsam gtan ’di dag byang chub dam pa mchog la pan || byang chub sems (5) dpa’ zag pa zad phyir slob pa min ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='8915256bi' class='paragraph'>
+							One who is established in the Trances becomes one who obtains the foremost wisdom; <br />And also when he experiences the four most excellent Formless Trances, <br />He makes these Trances subservient to the best and foremost enlightenment. <br />But it is not for the extinction of the outflows that the Bodhisattva trains himself in these.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8914138bi' class='paragraph'>
+							āścaryam adbhutam idaṃ guṇasaṃcayānāṃ dhyāne samādhi viharanti nimitta nāsti |<br />tatra sthitāna yadi bhajyati ātmabhāvo puna kāmadhātu upapadyati yathābhiprāyā || 29,3 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8914511bi' class='paragraph'>
+							此功德藏未曾有  行三摩地而無相 <br />住彼不破於我見  有心所思生欲界&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8914884bi' class='paragraph'>
+							’di ni yon tan stsogs pa’i ngo mtshar rmad byung ste || bsam gtan ting nge ’dzin la gnas nas mtshan ma med ||<br />de la gnas rnams gal te lus ni zhig gyur na || bsam pa ji bzhin ’dod pa’i khams su yang skye’o ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='8915257bi' class='paragraph'>
+							Astonishing and wonderful is this accumulation of precious qualities. <br />When they have dwelled in Trance and Concentration, there is then no sign. <br />When the personality of those who have stood therein breaks up, <br />They are reborn again in the world of sense-desire, as [and where] they had intended.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8914139bi' class='paragraph'>
+							yatha jambudvīpaka manuṣya alabdhapūrvā divi devauttamapurā anuprāpuṇeyā |<br />paśyitva te viṣaya tatra parigṛhītā punarāgameya na ca niśrayu tatra kuryāt || 29,4 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8914512bi' class='paragraph'>
+							譬如南閻浮提人  未生諸天生北洲 <br />見彼境界而求生  作彼住已而復還&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8914885bi' class='paragraph'>
+							dper na (6) ’dzam gling mi zhig sngon chad lha yul gyi || lha yi grong khyer mchog tu ma phyin phyis song ste ||<br />de ni yongs su bzung ba’i yul de rnams mthong nas || phyir ’dir ’ong bar gyur na chags par mi byed ltar ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='8915258bi' class='paragraph'>
+							As some man from Jambudvipa who had in the past been a god, <br />Would, after reaching again the highest abodes of the gods, <br />See the apartments contained in them <br />And would then again come back, and not make his home therein;&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8914140bi' class='paragraph'>
+							emeva te guṇadharā varabodhisattvā dhyāne samādhi viharitva prayuktayogī |<br />puna kāmadhātusthita bhonti anopaliptā padmeva vāriṇi aniśrita bāladharme || 29,5 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8914513bi' class='paragraph'>
+							菩薩所修之功德  三摩地行而相應 <br />雖同凡夫住欲界  由如蓮華不著水&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8914886bi' class='paragraph'>
+							de bzhin byang chub sems dpa’i yon tan mchog ’chang ba || (7) rnal ’byor brtson te bsam gtan ting ’dzin la gnas nas ||<br />phyir yang ’dod pa’i khams su gnas te chags pa med || chu yi padma bzhin du byis pa’i chos mi gnas ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='8915259bi' class='paragraph'>
+							Just so those Bodhisattvas, bearers of the best qualities, <br />Having dwelt in Trance and Concentration, <br />Yogins who have exerted themselves, <br />Become again established in the sense-world, unstained <br />As the lotus in water, independent of the dharmas of the fools.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8914141bi' class='paragraph'>
+							anyatra sattvaparipācana kṣetraśodhī paripūraṇārtha imi pāramitā mahātmā |<br />ārūpyadhātuupapatti na prārthayantī yatreha bodhiguṇapāramitāna hāni || 29,6 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8914514bi' class='paragraph'>
+							菩薩度脫於眾生  圓滿淨土波羅蜜 <br />不求生於無色界  而求菩提波羅蜜&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8914887bi' class='paragraph'>
+							bdag nyid chen po sems can yongs su smin bya dang || zhing spyod pha rol phyin rdzogs don (17a1) byed kho nar zad ||<br />byang chub yon tan pha rol phyin nyams ’gyur ’ong zhes || gzugs med khams su skye ba don du gnyer mi byed ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='8915260bi' class='paragraph'>
+							Except in order to mature beings, to purify the [Buddha-] field, <br />To fulfil these perfections, the Great-souled ones <br />Do not strive after rebirth in the formless world, <br />Lest there be a loss of the perfections and of the qualities of enlightenment therein.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8914142bi' class='paragraph'>
+							yatha kaścid eva puruṣo ratanaṃ nidhānaṃ labdhvā tu tatra spṛhabuddhi na saṃjaneyyā |<br />ekāki so puna gṛhītva parasmi kāle gṛhṇitva geha praviśitva na bhoti lubdho || 29,7 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8914515bi' class='paragraph'>
+							譬如天人獲寶藏  雖得不生愛樂心 <br />或言天人而起心  欲收彼寶不可得&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8914888bi' class='paragraph'>
+							dper na mi zhig rin chen gter rnams rnyed gyur nas || de la ’dod pa’i blo ni bskyed par ma byas la ||<br />des kyang dus gzhan zhig (2) na de dag yongs blangs shing || blangs nas khyim du song ste chags par mi byed ltar ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='8915261bi' class='paragraph'>
+							It is as if some man, having found a deposit of jewels, <br />Would not generate longing in his intelligence with regard to it. <br />At some other time he may acquire a few of them; <br />Having taken hold of them, having entered his home, he would not be covetous [for any more?].&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8914143bi' class='paragraph'>
+							emeva dhyāna catur eva samādhi śāntāṃ labdhvāna prīti sukhadāṃ vidu bodhisattvāḥ |<br />avasṛjya dhyānasukhaprītisamādhilābhaṃ puna kāmadhātu praviśanti jagānukampī || 29,8 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8914516bi' class='paragraph'>
+							大智菩薩不樂住  四禪寂靜三摩地 <br />出彼寂靜三摩地  而入欲界為世間&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8914889bi' class='paragraph'>
+							de bzhin byang chub sems dpa’ mkhas pa dga’ ba dang || bde sbyin bsam gtan ting ’dzin zhi ba bzhi thob nas ||<br />bsam gtan bde ldan bsam gtan ting ’dzin thob btang ste || ’gro (3) la snying brtser ldan pa phyir yang ’dod khams ’jug ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='8915262bi' class='paragraph'>
+							Just so the wise Bodhisattvas who have gained <br />The calm concentration of the four Trances, which gives joy and ease, <br />Having let go the acquisition of the joy and ease of Trance and concentration, <br />They enter again into the sensuous world, compassionate for all that lives.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8914144bi' class='paragraph'>
+							yadi bodhisattva viharāti samādhidhyāne rahapratyayāni spṛhabuddhi na saṃjaneyyā |<br />asamāhito bhavati uddhatakṣiptacitto parihīnabuddhiguṇa nāvika bhinnanāvo || 29,9 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8914517bi' class='paragraph'>
+							若菩薩行三摩地  不樂羅漢及緣覺 <br />乃至散亂兇惡心  無知迷亂無功德&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8914890bi' class='paragraph'>
+							gal te byang chub sems dpa’ ting ’dzin bsam gtan gnas || dgra bcom rang rgyal theg par ’dod pa’i blo skyed na ||<br />mnyam par ma bzhag rgod cing sems g.yengs gyur pa ste || sangs rgyas yon tan yongs nyams (4) mnyan pa gru zhig bzhin ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='8915263bi' class='paragraph'>
+							When a Bodhisattva dwells in the concentration of the Trances, <br />He generates no longing in his intelligence for the vehicle of the Arhats and Pratyekabuddhas: [For then] he becomes unconcentrated, in his thought distracted and puffed up, <br />He has lost the qualities of a Buddha, a sailor who suffers shipwreck.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8914145bi' class='paragraph'>
+							kiṃcāpi rūpam api śabda tathaiva gandho rasa sparśa kāmaguṇa pañcabhi yukta bhogī |<br />rahapratyayāna vigato ’nantabodhisattvo satataṃ samāhitu prajānayitavya śūro || 29,10 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8914518bi' class='paragraph'>
+							色聲香味觸五欲  及彼緣覺聲聞等 <br />如是之法悉遠離  等引不離菩提心&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8914891bi' class='paragraph'>
+							gzhan yang gzugs dang sgra dang de bzhin dri dang ro || reg dang ’dod yon lnga la mngon par brtson gyur kyang ||<br />dgra bcom rang rgyal theg bral byang chub sems dga’ na || dpa’ bo rtag tu mnyam gzhag yin par shes par bya ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='8915264bi' class='paragraph'>
+							Although he applies himself to the five sense-qualities, - <br />To form and sound, and likewise smell, and taste, and touch, <br />When free from the vehicle of the Arhats and Pratyekabuddhas, the joyous Bodhisattva Should, a hero, be wisely known as being constantly concentrated.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8914146bi' class='paragraph'>
+							parasattvapudgalanidāna viśuddhasattvā vicaranti vīryabalapāramitābhiyuktāḥ |<br />yatha kumbhadāsi avaśāvaśa bhartikasya tatha sarvasattvavaśatāmupayānti dhīrāḥ || 29,11 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8914519bi' class='paragraph'>
+							菩薩一向為眾生  修行精進波羅蜜 <br />如僕事主心專注  雖被瞋辱而無對&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8914892bi' class='paragraph'>
+							sems (5) can gang zag gzhan phyir sems dpa’ rnam dag pa || brtson ’grus pha rol phyin la mngon brtson rnam par spyod ||<br />dper na bran mo chu chun dbang med rje bo’i dbang || de bzhin dpa’ rnams sems can kun gyi dbang gis ’gro ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='8915265bi' class='paragraph'>
+							The Perfection of Vigour<br />They have pure and courageous minds and are linked to other beings and persons, <br />[When] they are practising the excellent perfection of Vigour. <br />As a maid servant is submissive to her master who is not subject to anyone else, <br />So do the firmly wise submit to subjection by all beings.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8914147bi' class='paragraph'>
+							na ca svāmikasya prativākyu dadāti dāsī ākruṣṭa cāpi athavā sada tāḍitā vā |<br />ekāntatrastamanasā sa bhayābhibhūtā mām eva so anu vadhiṣyati kāraṇena || 29,12 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8914520bi' class='paragraph'>
+							凡所動止常在心  唯恐彼主責其過&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8914893bi' class='paragraph'>
+							spyo ba byas sam ’on te rtag tu brdegs (6) kyang rung || bran mo rje bo la ni zlog tshig mi smra yi ||<br />’di yis bdag ni bsad par ’gyur du ’ong snyam nas || shin tu skrag pa’i yid kyis ’jigs bcas zil gyis gnon ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='8915266bi' class='paragraph'>
+							The servant does not answer back to her master, <br />Even when abused, struck, or beaten. <br />Exceedingly trembling in mind, and overcome by fear, <br />She thinks, ‘He surely will kill me for that!’&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8914148bi' class='paragraph'>
+							emeva bodhivaraprasthitu bodhisattvo tiṣṭheya sarvajagatī yatha preṣyabhūto |<br />anu bodhiāgamu guṇāna ca pāripūrī tṛṇa agni kāṣṭhaprabhavo dahate tam eva || 29,13 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8914521bi' class='paragraph'>
+							菩薩為求佛菩提  如奴事主利眾生<br />證得無上菩提已  利生如火燒草木&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8914894bi' class='paragraph'>
+							de bzhin byang chub ched du byang chub mchog zhugs pa || ’gro ba kun la bran gyur bzhin du (7) gnas par bya ||<br />’di las byang chub thob cing yon tan rdzogs par ’gyur || rtswa dang shing las me byung bas ni de nyid sreg ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='8915267bi' class='paragraph'>
+							Just so the Bodhisattva who has set out for the foremost enlightenment, <br />Should behave towards the entire world like a true servant. <br />Thereupon he obtains enlightenment, and the fulfilment of the qualities takes place. <br />Fire, which has arisen from grass and sticks, [then] burns them up.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8914149bi' class='paragraph'>
+							avasṛjya ātma sugatāṃ parasattvakārye abhiyukta rātridiva niṣpratikāṅkṣacitto |<br />māteva ekasutake paricāryamāṇo adhyāśaye na parikhinna upasthiheti || 29,14 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8914522bi' class='paragraph'>
+							晝夜勤行利他行  利已內心無我相 <br />如母愛子常衛護  寒暑雖苦心無倦&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8914895bi' class='paragraph'>
+							bdag gi bde ba btang nas re ba med sems kyis || sems can gzhan gyi dgos la nyin mtshan mngon par brtson ||<br />bu gcig pa la ma ni (17b1) rim gro byed pa ltar || bsam pa thag pas rnam par skyo med gnas par gyis ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='English'><span id='8915268bi' class='paragraph'>
+							Having renounced a happy destiny for himself, <br />Practising his duty towards other beings, day and night, in his thought free from hesitation: <br />Like a mother, ministering to [her] only child, <br />He abides in his resolute intention unexhausted.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='8914150bi' class='paragraph'>
+							bhagavatyāṃ ratnaguṇasaṃcayagāthāyām anugamaparivarto nāmaikūnatriṃśatimaḥ ||&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "8914135";
+							kilderef = "Rgs Rgs verse  - Rgs verse ";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='8914523bi' class='paragraph'>
+							&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "8914508";
+							kilderef = "Rgs T.229, Fa-xian (法賢法師), A.D. 991  - T.229, Fa-xian (法賢法師), A.D. 991 ";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='8914896bi' class='paragraph'>
+							&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "8914881";
+							kilderef = "Rgs Kj, sher rab sna tshogs, ka  16b3 - Kj, sher rab sna tshogs, ka 17b1";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='textvar' style='width:24%;'><div class='English'><span id='8915269bi' class='paragraph'>
+							&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "8915254";
+							kilderef = "Rgs Conze (1973)  - Conze (1973) ";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'></div><div class='textvar' style='width:24%;'></div><div class='textvar' style='width:24%;'></div><div class='textvar' style='width:24%;'></div></div><div class='clear'></div><div class="fontboks"><a onClick=onOffdiv('permlink') name="permlink" href="#permlink">Permanent link</a></div><div class='clear'></div><div class='perm_felt' id='permlink'>http://www2.hf.uio.no/common/apps/permlink/permlink.php?app=polyglotta&amp;context=ctext&amp;uid=ee04677e-5119-11e6-98cc-0050569f23b2</div></div></div><!-- infofelt --></div><!-- divControl --><div class="clear"></div>
+<div style="clear:both"></div><div class="signatur"><div class="signatur_left">
+		<a href="https://wiki.uio.no/hf/dmlf/index.php/Kategori:Polyglotta:Documentation">Go to Wiki Documentation</a></br>Enhet: <a HREF=http://www.hf.uio.no>Det humanistiske fakultet</a> &nbsp; Utviklet av: <a href="http://www.hf.uio.no/tjenester/it">IT-seksjonen ved HF</a></div><!--signatur_left -->
+		<div class="signatur_right"><a href="/polyglotta/admin/index.php">Login</a></div>
+		<div style="clear:both"></div></div>
+</body></html><SCRIPT LANGUAGE="JAVASCRIPT">
+	
+	$("#tr_IA").click(function(){
+	    if ($("#toggle_container_IA").is(':hidden'))
+	    	$("#toggle_container_IA").show();
+	    else{
+	        $("#toggle_container_IA").hide();
+	    }
+	    return false;
+		});
+
+	$("#tr_lang").click(function(){
+	    if ($("#toggle_container_lan").is(':hidden'))
+	    	$("#toggle_container_lan").show();
+	    else{
+	        $("#toggle_container_lan").hide();
+	    }
+	    return false;
+	});
+
+	$("#tr_img").click(function(){
+	    if ($("#toggle_container_img").is(':hidden'))
+	    	$("#toggle_container_img").show();
+	    else{
+	        $("#toggle_container_img").hide();
+	    }
+	    return false;
+	});
+
+	$("#diac2button").click(function(){
+	   if ($("#ex3a").is(':hidden')){
+		   $("#ex3a").show();
+	       $("#diac2button").html("Hide&#32Diacritica-help");
+	   }else{
+	       $("#ex3a").hide();
+	       $("#diac2button").html("Diacritica-help");
+	   }
+	   return false;
+	});
+
+	$("#diacbutton").click(function(){
+	   if ($("#diacritical_sign").is(':hidden')){
+		   	$("#diacritical_sign").show();
+	      	$("#diacbutton").html("Hide&#32diacritica");
+	   }else{
+	        $("#diacritical_sign").hide();
+	        $("#diacbutton").html("Diacritica");
+	   }
+	   return false;
+    });
+
+	$('#toggle_container_IA').click(function(e) {
+	   e.stopPropagation();
+	});
+
+	$('#toggle_container_lan').click(function(e) {
+        e.stopPropagation();
+    });
+
+	$('#toggle_container_img').click(function(e) {
+        e.stopPropagation();
+    });
+
+	$('#ex3a').click(function(e) {
+	    e.stopPropagation();
+	});
+
+	$('#diacritical_sign').click(function(e) {
+        e.stopPropagation();
+    });
+
+	//Kode for å sette inn diakritiske tegn
+	$('#diacritical > tbody > tr > td').click(function() {
+	  	//alert('red');
+		$("#sokeboks").val($("#sokeboks").val() + $(this).text());
+	});
+
+	$('.diac2button').text(($('.diacbutton').text() == 'Diacritica-help') ? 'Hide Diacritica-help' : 'Diacritica-help');
+	
+	//Lukker alle åpnede pop'uper ved klikk på siden
+	$(document).click(function() {
+		$('#toggle_container_IA').hide();
+	    
+        $('#toggle_container_lan').hide();
+    
+        $('#toggle_container_img').hide();
+   
+   		$('#diacritical_sign').hide();
+   		$("#diacbutton").html("Diacritica");
+   
+       	$('#ex3a').hide();
+       	$("#diac2button").html("Diacritica-help");
+   });
+	</SCRIPT>
